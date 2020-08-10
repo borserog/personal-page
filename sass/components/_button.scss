@@ -1,0 +1,83 @@
+.button {
+    border: 1px solid transparent;
+    position: relative;
+    width: 12rem;
+    height: 13rem;
+    border-radius: 16px;
+    // border: 1px solid #dedede
+    cursor: pointer;
+    transition: all .2s;
+
+    // &:after {
+    //     content: '';
+    //     position: absolute;
+    //     top: 60%;
+    //     left: 50%;
+    //     width: 85%;
+    //     border-radius: 16px;
+    //     height: 0.15rem;
+    //     background-color: lighten($dark-gray, 50%);
+    //     transform: translateX(-50%);
+    // }
+
+    &--primary {
+        background-color: $dark-red;
+
+        .button__label {
+            color: $light-gray;
+        }
+
+        &:hover {
+            background-color: darken($dark-red, 10%);
+        }
+
+    }
+
+    &--secondary {
+        border-color: #dedede;
+
+        .button__label {
+            color: $light-gray;
+        }
+
+        &:hover {
+            background-color: transparentize($light-gray, .8);
+        }
+
+    }
+
+    &--tertiary {
+        color: $font-light;
+
+        &:hover {
+            background-color: transparentize($light-gray, .8);
+        }
+
+        .button__label {
+            color: $light-gray;
+        }
+    }
+
+    &__icon {
+        font-size: 5rem;
+        position: absolute;
+        top: 15%;
+        left: 50%;
+        transform: translateX(-50%);
+        color: $light-gray;
+
+
+    }
+
+    &__label {
+        font-weight: bold;
+        letter-spacing: .1px;
+        font-size: 1.8rem;
+        position: absolute;
+        top: 80%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: fit-content;
+        cursor: inherit;
+    }
+}
