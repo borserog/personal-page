@@ -64,7 +64,7 @@ body {
   border: 1px solid transparent;
   position: relative;
   width: 12rem;
-  height: 15rem;
+  height: 13rem;
   border-radius: 16px;
   cursor: pointer;
   transition: all .2s; }
@@ -129,9 +129,10 @@ body {
     left: 0;
     padding: 0 5rem;
     transform: translateY(-50%); }
-    @media only screen and (max-width: 75em) {
+    @media only screen and (max-width: 37.5em) {
       .hero-section .hero {
-        width: 100%; } }
+        width: 100%;
+        padding: 0; } }
     .hero-section .hero__title .dot-pattern {
       width: 15rem;
       position: absolute;
