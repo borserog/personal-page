@@ -140,20 +140,19 @@ body {
   margin: 0 auto; }
 
 .hero-section {
-  height: 95vh;
-  padding-top: 4rem; }
+  height: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1.6fr;
+  align-items: center; }
   @media only screen and (max-width: 37.5em) {
     .hero-section {
       padding: 1rem; } }
   .hero-section .hero {
     border: 0px solid yellow;
     position: relative;
-    width: 60%;
     height: 60rem;
-    top: 40rem;
     left: 0;
-    padding: 0 5rem;
-    transform: translateY(-50%); }
+    padding: 0 5rem; }
     @media only screen and (max-width: 37.5em) {
       .hero-section .hero {
         width: 100%;
@@ -164,6 +163,9 @@ body {
       z-index: -1;
       top: -3rem;
       left: 2rem; }
+      @media only screen and (max-width: 37.5em) {
+        .hero-section .hero__title .dot-pattern {
+          visibility: hidden; } }
     .hero-section .hero__subtitle {
       position: relative;
       margin-top: 4rem; }
@@ -183,3 +185,61 @@ body {
           justify-content: center; } }
       .hero-section .hero__buttons > .button:not(:first-child) {
         margin-left: 4rem; }
+  .hero-section .browser-animation {
+    position: relative;
+    border: 0px solid yellow;
+    height: 100%;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center; }
+    @media only screen and (max-width: 37.5em) {
+      .hero-section .browser-animation {
+        visibility: hidden; } }
+    .hero-section .browser-animation__container {
+      min-width: 60rem;
+      position: relative;
+      backface-visibility: hidden;
+      border: 0px solid blue;
+      -moz-transform: rotate(15deg) skew(-45deg, 0deg);
+      -webkit-transform: rotate(15deg) skew(-45deg, 0deg);
+      -o-transform: rotate(15deg) skew(-45deg, 0deg);
+      -ms-transform: rotate(15deg) skew(-45deg, 0deg);
+      transform: rotate(15deg) skew(-45deg, 0deg); }
+    .hero-section .browser-animation__browser {
+      width: 30rem;
+      height: 20rem;
+      position: relative;
+      left: 50%;
+      transform: translateX(-50%);
+      border-radius: 16px; }
+      .hero-section .browser-animation__browser--vector {
+        width: 100%;
+        height: 100%; }
+    .hero-section .browser-animation__cog-group {
+      width: fit-content;
+      height: 15rem;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -30%); }
+      .hero-section .browser-animation__cog-group--big-cog {
+        height: 10rem;
+        animation: cogRotationReverse 10s infinite ease-in-out; }
+      .hero-section .browser-animation__cog-group--small-cog {
+        height: 6.25rem;
+        animation: cogRotation 10s infinite ease-in-out;
+        position: relative;
+        top: 1.5rem;
+        left: -1.1rem; }
+
+@keyframes cogRotation {
+  0% {
+    transform: rotate(0); }
+  100% {
+    transform: rotate(-360deg); } }
+
+@keyframes cogRotationReverse {
+  0% {
+    transform: rotate(0); }
+  100% {
+    transform: rotate(360deg); } }
