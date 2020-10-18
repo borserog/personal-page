@@ -146,7 +146,8 @@ body {
   align-items: center; }
   @media only screen and (max-width: 37.5em) {
     .hero-section {
-      padding: 1rem; } }
+      padding: 3rem;
+      display: inherit; } }
   .hero-section .hero {
     border: 0px solid yellow;
     position: relative;

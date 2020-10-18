@@ -18,7 +18,8 @@ $border-width: 0px;
     align-items: center;
 
     @include respond(phone) {
-        padding: 1rem;
+        padding: 3rem;
+        display: inherit;
     }
 
     .hero {
