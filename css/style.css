@@ -13,6 +13,15 @@ ORDER: Base + typography > general layout + grid > page layout > components
 1em = 16px
 */
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;600;900&display=swap");
+@keyframes browserEchoFade {
+  0% {
+    opacity: .7; }
+  50% {
+    opacity: .3;
+    transform: translate(20px, 20px); }
+  100% {
+    opacity: .7; } }
+
 *,
 *::after,
 *::before {
@@ -133,12 +142,15 @@ body {
 .container {
   background: url("./../../assets/asanoha-400px.png") repeat; }
   .container::before {
-    content: '';
+    content: "";
     position: absolute;
     width: 100%;
     height: 100%;
     z-index: -3;
     background: linear-gradient(226.82deg, rgba(255, 0, 0, 0.27) -18.54%, rgba(0, 0, 0, 0.97) 41.11%); }
+    @media only screen and (max-width: 75em) {
+      .container::before {
+        background: linear-gradient(180.82deg, rgba(255, 0, 0, 0.37) -1.54%, rgba(0, 0, 0, 0.97) 49.91%); } }
 
 [class*="-section"] {
   position: relative;
@@ -185,8 +197,8 @@ body {
       position: relative;
       margin-top: 4rem; }
       .hero-section .hero__subtitle::before {
-        content: '';
-        width: .1rem;
+        content: "";
+        width: 0.1rem;
         height: 100%; }
       .hero-section .hero__subtitle .paragraph:not(:first-child) {
         margin-top: 1.5rem; }
@@ -231,6 +243,11 @@ body {
       .hero-section .browser-animation__browser--vector {
         width: 100%;
         height: 100%; }
+      .hero-section .browser-animation__browser--echo {
+        width: 100%;
+        height: 100%;
+        position: relative;
+        top: -1rem; }
     .hero-section .browser-animation__cog-group {
       width: fit-content;
       height: 15rem;
@@ -238,15 +255,19 @@ body {
       top: 50%;
       left: 50%;
       transform: translate(-50%, -30%); }
+      .hero-section .browser-animation__cog-group:hover .browser-animation__cog-group--big-cog {
+        transform: rotate(-360deg); }
+      .hero-section .browser-animation__cog-group:hover .browser-animation__cog-group--small-cog {
+        transform: rotate(360deg); }
       .hero-section .browser-animation__cog-group--big-cog {
-        height: 10rem;
-        animation: cogRotationReverse 10s infinite ease-in-out; }
+        height: 10rem; }
       .hero-section .browser-animation__cog-group--small-cog {
-        height: 6.25rem;
-        animation: cogRotation 10s infinite ease-in-out;
+        height: 6rem;
         position: relative;
         top: 1.5rem;
         left: -1.1rem; }
+      .hero-section .browser-animation__cog-group--big-cog, .hero-section .browser-animation__cog-group--small-cog {
+        transition: all 2s; }
 
 @keyframes cogRotation {
   0% {

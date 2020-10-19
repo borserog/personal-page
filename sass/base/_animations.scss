@@ -1,0 +1,9 @@
+@keyframes browserEchoFade {
+    0% { opacity: .7; }
+    50% { 
+        opacity: .3; 
+        transform: translate(20px, 20px);
+    }
+    100% { opacity: .7; }
+}
+
