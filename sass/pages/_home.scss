@@ -126,11 +126,11 @@ $border-width: 0px;
       position: relative;
       backface-visibility: hidden;
       border: $border-width solid blue;
-      -moz-transform: rotate(15deg) skew(-45deg, 0deg);
-      -webkit-transform: rotate(15deg) skew(-45deg, 0deg);
-      -o-transform: rotate(15deg) skew(-45deg, 0deg);
-      -ms-transform: rotate(15deg) skew(-45deg, 0deg);
-      transform: rotate(15deg) skew(-45deg, 0deg);
+      -moz-transform: rotate(15deg) skew(-20deg, 0deg);
+      -webkit-transform: rotate(15deg) skew(-20deg, 0deg);
+      -o-transform: rotate(15deg) skew(-20deg, 0deg);
+      -ms-transform: rotate(15deg) skew(-20deg, 0deg);
+      transform: rotate(15deg) skew(-20deg, 0deg);
     }
 
     &__browser {
