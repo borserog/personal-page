@@ -22,8 +22,8 @@ export class BrowserEchoAnimation {
         echoElement.style.position = 'absolute';
         echoElement.style.zIndex = `${-1 * position}`;
         echoElement.style.borderRadius = '16px';
-        echoElement.style.top = `${21 * position}px`;
-        echoElement.style.left = `${27 * position}px`;
+        echoElement.style.top = `${20 * position}px`;
+        echoElement.style.left = `${26 * position}px`;
         echoElement.style.backgroundColor = `rgb(${72 + (position * grayscaleModifier)}, ${72 + position * grayscaleModifier}, ${72 + position * grayscaleModifier})`;
         echoElement.style.animation = `browserEchoFade 2.5s infinite ease-in-out`;
         echoElement.style.animationDelay = `.${position * 10}s`;

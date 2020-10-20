@@ -18,7 +18,7 @@ ORDER: Base + typography > general layout + grid > page layout > components
     opacity: .7; }
   50% {
     opacity: .3;
-    transform: translate(20px, 20px); }
+    transform: translate(10px, 10px); }
   100% {
     opacity: .7; } }
 
@@ -133,6 +133,21 @@ body {
     transform: translate(-50%, -50%);
     width: fit-content;
     cursor: inherit; }
+
+.fly {
+  transition: all .5s;
+  color: #a00026;
+  animation: flyPaperFly .35s ease-in-out; }
+
+@keyframes flyPaperFly {
+  0% {
+    transform: translateX(-50%); }
+  25% {
+    transform: translateX(-60%); }
+  75% {
+    transform: translateX(-40%); }
+  100% {
+    transform: translateX(-50%); } }
 
 .footer {
   background-color: #191919;

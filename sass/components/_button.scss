@@ -78,7 +78,9 @@
         transform: translateX(-50%);
         color: $light-gray;
 
-
+        // &--3 {
+        //     transform: translate(-5px, 5px);
+        // }
     }
 
     &__label {
@@ -92,4 +94,17 @@
         width: fit-content;
         cursor: inherit;
     }
+}
+
+.fly {
+    transition: all .5s;
+    color: $dark-red;
+    animation: flyPaperFly .35s ease-in-out;
+}
+
+@keyframes flyPaperFly {
+    0% { transform: translateX(-50%); }
+    25% { transform: translateX(-60%); }
+    75% { transform: translateX(-40%); }
+    100% { transform: translateX(-50%); }
 }
