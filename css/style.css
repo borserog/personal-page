@@ -70,7 +70,8 @@ body {
 .heading-primary {
   color: #dedede;
   line-height: 10rem;
-  font-size: 7.5rem; }
+  font-size: 7.5rem;
+  text-shadow: -4px 10px 12px rgba(0, 0, 0, 0.5); }
 
 .button {
   border: 1px solid transparent;
@@ -155,7 +156,7 @@ body {
   height: 15rem; }
 
 .container {
-  background: url("./../../assets/asanoha-400px.png") repeat; }
+  background: url("../personal-page/assets/asanoha-400px.png") repeat; }
   .container::before {
     content: "";
     position: absolute;
@@ -221,7 +222,7 @@ body {
       display: flex;
       flex-flow: row nowrap;
       justify-content: flex-start;
-      margin-top: 8rem; }
+      margin-top: 6rem; }
       @media only screen and (max-width: 37.5em) {
         .hero-section .hero__buttons {
           justify-content: center; } }

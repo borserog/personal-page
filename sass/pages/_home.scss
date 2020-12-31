@@ -96,7 +96,7 @@ $border-width: 0px;
       display: flex;
       flex-flow: row nowrap;
       justify-content: flex-start;
-      margin-top: 8rem;
+      margin-top: 6rem;
 
       @include respond(phone) {
         justify-content: center;
