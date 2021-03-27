@@ -37,6 +37,7 @@ $border-width: 0px;
   display: grid;
   grid-template-columns: 1fr 1.6fr;
   align-items: center;
+  overflow: auto;
 
   @include respond(tab-land) {
     padding: 3rem;
@@ -64,12 +65,15 @@ $border-width: 0px;
     }
 
     &__title {
+      position: relative;
+      
       .dot-pattern {
         width: 15rem;
         position: absolute;
         z-index: -1;
-        top: -3rem;
-        left: 2rem;
+        top: -1rem;
+        left: -4rem;
+        padding: 1rem;
 
         @include respond(phone) {
           visibility: hidden;
